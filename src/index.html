@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bookshop</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles/css/main.css">
+</head>
+<body>
+	<header class="header">
+		<a href="index.html" class="header__logo"><img class="logo" src="img/header/Bookshop.svg" alt="Bookshop logo"></a>
+		<nav class="header__nav">
+			<ul class="header__list">
+				<li class="header__item header__item_active"><a href="#">books</a></li>
+				<li class="header__item"><a href="#">audiobooks</a></li>
+				<li class="header__item"><a href="#">stationery &#38; gifts</a></li>
+				<li class="header__item"><a href="#">blog</a></li>
+			</ul>
+		</nav>
+		<div class="header__widgets">
+			<button class="header__btn user-btn"><img src="img/header/user.svg" alt="Your account"></button>
+			<button class="header__btn search-btn"><img src="img/header/search.svg" alt="Search button"></button>
+			<button class="header__btn bag-btn"><img src="img/header/shop bag.svg" alt="Your shopping bag"></button>
+		</div>
+	</header>
+	<main class="main">
+		<section id="slider" class="slider">
+			<div class="slider-img-block">
+				<img src="img/slider/banner.jpg" alt="" class="slider-img">
+			</div>
+			<div class="controlls-dots">
+				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
+				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
+				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
+			</div>
+		</section>
+		<aside id="aside" class="aside">
+			<nav>
+				<ul></ul>
+			</nav>
+		</aside>
+		<section id="bookSection">
+			<ul id="bookList" class="bookList">
+				<li class="bookItem"></li>
+				<li class="bookItem"></li>
+				<li class="bookItem"></li>
+				<li class="bookItem"></li>
+				<li class="bookItem"></li>
+				<li class="bookItem"></li>
+			</ul>
+		</section>
+	</main>
+	<script type="module" src="js/slider.js"></script>
+	<script type="module" src="js/index.js"></script>
+</body>
+</html>

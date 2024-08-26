@@ -1,0 +1,26 @@
+.slider {
+	margin-bottom: 105px;
+}
+.slider-img-block {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 17px;
+}
+.slider-img {
+	width: 1120px;
+	max-height: 702px;
+}
+.controlls-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.controlls-dot {
+	cursor: pointer;
+}
+.dot_active {
+	
+}
