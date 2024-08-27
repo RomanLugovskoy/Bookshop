@@ -1,0 +1,41 @@
+@import "variables";
+.aside {
+}
+.sidebar {
+	padding: 45px 0 45px 138px;
+	background-color: #EFEEF6;
+	max-width: 416px;
+}
+.sidebar__list {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-size: 12px;
+}
+.sidebar__item {
+	display: inline-block;
+	padding-left: 20px;
+	color: $base-light-color;
+	&:hover {
+		color: $base-hover-color;
+	}
+}
+.sidebar__item-active {
+	position: relative;
+	font-size: 16px;
+	font-weight: bold;
+	color: $base-dark-color;
+	&::before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 5px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #756AD3;
+	}
+}

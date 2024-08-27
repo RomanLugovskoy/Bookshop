@@ -1,0 +1,37 @@
+@import "variables";
+
+.promo-item {
+	display: flex;
+	align-items: flex-end;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: $base-dark-color;
+	padding: 20px 20px 36px;
+	background-image: url(../../img/arrow.svg);
+	background-repeat: no-repeat;
+	background-position: bottom 20px left 20px;
+	background-size: 55px;
+
+	&:hover {
+		color: rgb(168, 0, 104);
+		transition: color .5s ease;
+	}
+}
+.promo1 {
+	position: absolute;
+	top: 79px;
+	right: 74px;
+	background-color: #9E98DC;
+	width: 149px;
+	min-height: 204px;
+}
+.promo2 {
+	position: absolute;
+	top: 359px;
+	right: 1px;
+	background-color: #FF8FE6;
+	width: 137px;
+	min-height: 273px;
+}

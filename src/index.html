@@ -27,17 +27,38 @@
 	<main class="main">
 		<section id="slider" class="slider">
 			<div class="slider-img-block">
-				<img src="img/slider/banner.jpg" alt="" class="slider-img">
+				<a href="#"><img src="img/slider/banner.jpg" alt="Black friday sale" class="slider-img slider-shadow"></a>
 			</div>
 			<div class="controlls-dots">
-				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
-				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
-				<img src="img/slider/whiteDot.svg" alt="" class="controlls-dot">
+				<div class="controlls-dot dot_active" aria-label="controll dot"></div>
+				<div class="controlls-dot" aria-label="controll dot"></div>
+				<div class="controlls-dot" aria-label="controll dot"></div>
 			</div>
 		</section>
+		<div class="promo">
+			<a href="#" class="promo-item promo1 shadow">change old book on new</a>
+			<a href="#" class="promo-item promo2 shadow">top<br>100<br>books<br>2022</a>
+		</div>
 		<aside id="aside" class="aside">
-			<nav>
-				<ul></ul>
+			<nav class="sidebar">
+				<ul id="sidebarList" class="sidebar__list">
+					<li class="sidebar__list-item"><a href="" class="sidebar__item sidebar__item-active">Architecture</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Art &#38; Fashion</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Biography</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Business</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Crafts &#38; Hobbies</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Drama</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Fiction</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Food &#38; Drink</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Health &#38; Wellbeing</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">History &#38; Politics</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Humor</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Poetry</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Psychology</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Science</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Technology</a></li>
+					<li class="sidebar__list-item"><a href="" class="sidebar__item">Travel &#38; Maps</a></li>
+				</ul>
 			</nav>
 		</aside>
 		<section id="bookSection">
@@ -52,6 +73,7 @@
 		</section>
 	</main>
 	<script type="module" src="js/slider.js"></script>
+	<script type="module" src="js/sidebar.js"></script>
 	<script type="module" src="js/index.js"></script>
 </body>
 </html>
