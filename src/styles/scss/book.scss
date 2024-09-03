@@ -1,0 +1,79 @@
+.book-section {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 356px;
+	top: 46px;
+	max-width: 924px;
+}
+.bookList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 96px 76px;
+}
+.bookItem {
+	display: flex;
+	gap: 36px;
+	flex-basis: calc(50% - 38px);
+	max-height: 300px;
+}
+.book-img {
+
+	& img {
+	width: 212px;
+	}
+}
+.book-info {
+	display: flex;
+	flex-direction: column;
+	padding: 49px 0;
+	max-width: 176px;
+}
+.book-authors {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	color: $base-light-color;
+	margin-bottom: 4px;
+}
+.book-title {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: $base-dark-color;
+	margin-bottom: 4px;
+}
+.book-rating {
+	display: flex;
+	margin-bottom: 16px;
+}
+.book-ratingsCount {
+	margin-left: 6px;
+}
+.book-description {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	color: $base-light-color;
+	margin-bottom: 16px;
+}
+.book-retailPrice {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	color: $base-dark-color;
+	margin-bottom: 16px;
+}
+.book-btn {
+	margin-top: auto;
+}
+.star-rating {
+	display: flex;
+	direction: row-reverse;
+	justify-content: flex-start;
+  }
+.star {
+color: #EEEDF5;
+}
+
+.star.active {
+color: #f2c94c;
+}

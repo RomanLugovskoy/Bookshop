@@ -5,13 +5,61 @@
 @import "slider";
 @import "promo";
 @import "sidebar";
-
+@import "book";
+body {
+	padding-top: 110px;
+}
 .main {
 	position: relative;
 	max-width: 1440px;
 	margin: 0 auto;
+	padding-bottom: 74px;
 }
-
+.center-wrapper {
+	display: flex;
+	position: relative;
+}
 .shadow {
 	box-shadow: 0px 30px 20px -10px rgba(34, 60, 80, 0.2);
+}
+.base-btn {
+	max-width: 176px;
+	background-color: transparent;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 8px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 18px 65px;
+	color: $btn-color;
+	border: 1px solid $btn-color;
+
+		&:hover {
+			color: $base-hover-color;
+			border-color: $base-hover-color;
+			transition: color .3s ease-in-out, border-color .3s ease-in-out;
+	}
+}
+.book-btn-active {
+	color: $base-light-color;
+	border-color: $base-light-color;
+}
+.load-more-btn {
+	margin: 96px 0 74px;
+	padding: 18px 60px;
+	align-self: center;
+}
+.book-btn-in-cart {
+	color: $base-light-color;
+    border: 1px solid #EEEDF5;
+	padding: 18px 55px;
+	margin-top: auto;
+	cursor: default;
+}
+
+.book-btn-out-of-stock {
+    display: none;
+}
+
+@media screen {
+	
 }

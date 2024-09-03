@@ -1,5 +1,7 @@
 @import "variables";
 .aside {
+	display: inline-block;
+	min-width: 416px;
 }
 .sidebar {
 	padding: 45px 0 45px 138px;

@@ -60,4 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoSlide();
 });
 
-export {changeSlide, startAutoSlide, imgElem, dots, currentIndex, slides};
+export {changeSlide, startAutoSlide, stopAutoSlide, imgElem, dots, currentIndex, slides, slideInterval};
