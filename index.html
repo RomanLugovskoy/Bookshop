@@ -5,32 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bookshop</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="styles/css/main.css">
 </head>
 <body>
 	<header class="header">
-		<a href="index.html" class="header__logo"><img class="logo" src="img/header/Bookshop.svg" alt="Bookshop logo"></a>
-		<nav class="header__nav">
-			<ul class="header__list">
-				<li class="header__item header__item_active"><a href="#">books</a></li>
-				<li class="header__item"><a href="#">audiobooks</a></li>
-				<li class="header__item"><a href="#">stationery &#38; gifts</a></li>
-				<li class="header__item"><a href="#">blog</a></li>
-			</ul>
-		</nav>
-		<div class="header__widgets">
-			<button class="header__btn user-btn"><img src="img/header/user.svg" alt="Your account"></button>
-			<button class="header__btn search-btn"><img src="img/header/search.svg" alt="Search button"></button>
-			<button class="header__btn bag-btn">
-				<img src="img/header/shop bag.svg" alt="Your shopping bag">
-				<span id="bag-count" class="bag-count"></span>
-			</button>
+		<div class="header-container">
+				<a href="index.html" class="header__logo"><img class="logo" src="images/Bookshop.svg" alt="Bookshop logo"></a>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item header__item_active"><a href="#">books</a></li>
+						<li class="header__item"><a href="#">audiobooks</a></li>
+						<li class="header__item"><a href="#">stationery &#38; gifts</a></li>
+						<li class="header__item"><a href="#">blog</a></li>
+					</ul>
+				</nav>
+				<div class="header__widgets">
+					<button class="header__btn user-btn"><img src="images/user.svg" alt="Your account"></button>
+					<button class="header__btn search-btn"><img src="images/search.svg" alt="Search button"></button>
+					<button class="header__btn bag-btn">
+						<img src="images/shop bag.svg" alt="Your shopping bag">
+						<span id="bag-count" class="bag-count"></span>
+					</button>
+				</div>
 		</div>
 	</header>
 	<main class="main">
 		<section id="slider" class="slider">
 			<div class="slider-img-block">
-				<a href="#"><img src="img/slider/banner.jpg" alt="Black friday sale" class="slider-img slider-shadow"></a>
+				<a href="#"><img src="images/banner.jpg" alt="Black friday sale" class="slider-img slider-shadow"></a>
 			</div>
 			<div class="controlls-dots">
 				<div class="controlls-dot dot_active" aria-label="controll dot"></div>
@@ -72,6 +73,6 @@
 			</section>
 		</div>
 	</main>
-	<script type="module" src="js/index.js"></script>
+	<!-- <script type="module" src="src/js/index.js"></script> -->
 </body>
 </html>

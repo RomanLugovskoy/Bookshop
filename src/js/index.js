@@ -1,6 +1,15 @@
 import * as slider from "./slider.js";
 import * as header from "./header.js";
 import * as bag from "./bag.js";
+import '../styles/scss/main.scss';
+import banner from "../img/banner.jpg";
+import banner2 from "../img/banner2.jpg";
+import banner3 from "../img/banner3.jpg";
+import bookshop from "../img/Bookshop.svg";
+import nocover from "../img/no-cover.jpg";
+import search from "../img/search.svg";
+import shopbag from "../img/shop bag.svg";
+import user from "../img/user.svg";
 
 const MAX_RESULTS = 6;
 
@@ -8,7 +17,7 @@ let startIndex = 0;
 let currentCategory = 'Architecture';
 
 function fetchBooks(category, startIndex = 0) {
-    return fetch(`https://www.googleapis.com/books/v1/volumes?q="subject:${category}"&key=AIzaSyAKonz2kKPQHXtmMwF4OP7K7wCzXCaUgRw&printType=books&startIndex=${startIndex}&maxResults=${MAX_RESULTS}&langRestrict=en`)
+    return fetch(`https://www.googleapis.com/books/v1/volumes?q="subject:${category}"&key=AIzaSyDS9LddDu7ygGLgEseQLS2giA2TL3o5dbA&printType=books&startIndex=${startIndex}&maxResults=${MAX_RESULTS}&langRestrict=en`)
         .then(res => res.json())
         .then(data => data.items || []);
 }
@@ -27,6 +36,7 @@ function renderBook(book) {
     const ratingsCount = book.volumeInfo.ratingsCount;
     const price = book.saleInfo.retailPrice ? `${book.saleInfo.retailPrice.amount} ${book.saleInfo.retailPrice.currencyCode}` : null;
     const isForSale = book.saleInfo.saleability === 'FOR_SALE';
+    const buttonId = `buy-button-${book.id}`;
 
     bookItem.innerHTML = `
         <div class="book-img">
@@ -41,7 +51,7 @@ function renderBook(book) {
             </div>` : ''}
             <p class="book-description">${description}</p>
             ${price ? `<p class="book-retailPrice">${price}</p>` : ''}
-            <button class="book-btn base-btn ${isForSale ? '' : 'book-btn-out-of-stock'}">${isForSale ? 'Buy Now' : 'Out of Stock'}</button>
+            <button id="${buttonId}" class="book-btn base-btn ${isForSale ? '' : 'book-btn-out-of-stock'}">${isForSale ? 'Buy Now' : 'Out of Stock'}</button>
         </div>
     `;
 
@@ -83,7 +93,6 @@ document.getElementById('loadMoreBtn').addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    updateButtonStates();
 });
 
 document.querySelectorAll('.sidebar__item').forEach(item => {
@@ -101,10 +110,3 @@ document.querySelectorAll('.sidebar__item').forEach(item => {
         });
     });
 });
-
-function updateButtonStates() {
-    const bagItems = JSON.parse(localStorage.getItem('bag')) || [];
-    bagItems.forEach(book => {
-        bag.updateButtonState(book, true);
-    });
-}

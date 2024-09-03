@@ -1,10 +1,17 @@
-
 function addToBag(book) {
     let bag = JSON.parse(localStorage.getItem('bag')) || [];
-    bag.push(book);
+    const index = bag.findIndex(item => item.id === book.id);
+
+    if (index !== -1) {
+        bag.splice(index, 1);
+        updateButtonState(book, false);
+    } else {
+        bag.push(book);
+        updateButtonState(book, true);
+    }
     localStorage.setItem('bag', JSON.stringify(bag));
     updateBagCount();
-    updateButtonState(book, true);
+    updateButtonState();
 }
 
 function updateBagCount() {
@@ -19,13 +26,18 @@ function updateBagCount() {
     }
 }
 
-function updateButtonState(book, isInCart) {
-    const bookItem = document.querySelector(`.bookItem[data-id="${book.id}"]`);
-    if (!bookItem) return;
+function updateButtonState() {
+    const bag = JSON.parse(localStorage.getItem('bag')) || [];
+    document.querySelectorAll('.bookItem').forEach(bookItem => {
+        const bookId = bookItem.dataset.id;
+        const button = bookItem.querySelector('button.book-btn, button.book-btn-in-cart');
+        if (!button) {
+            console.error('Button not found for book item:', bookItem);
+            return;
+        }
 
-    const button = bookItem.querySelector('.book-btn');
+        const isInCart = bag.some(book => book.id === bookId);
 
-    if (button) {
         if (isInCart) {
             button.textContent = 'In the Cart';
             button.classList.add('book-btn-in-cart');
@@ -35,14 +47,13 @@ function updateButtonState(book, isInCart) {
             button.classList.add('book-btn');
             button.classList.remove('book-btn-in-cart');
         }
-    } else {
-        console.error('Button not found.');
-    }
+    });
 }
 
 document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('book-btn')) {
+    if (event.target.classList.contains('book-btn') || event.target.classList.contains('book-btn-in-cart')) {
         event.preventDefault();
+
         const bookItem = event.target.closest('.bookItem');
 
         if (bookItem) {
@@ -52,12 +63,17 @@ document.addEventListener('click', (event) => {
                 authors: bookItem.querySelector('.book-authors') ? bookItem.querySelector('.book-authors').textContent : 'No Authors',
                 price: bookItem.querySelector('.book-retailPrice') ? bookItem.querySelector('.book-retailPrice').textContent : 'No Price',
             };
+
             addToBag(book);
         } else {
             console.error('Book item not found.');
         }
     }
 });
-document.addEventListener('DOMContentLoaded', updateBagCount);
 
-export {addToBag, updateBagCount, updateButtonState}
+document.addEventListener('DOMContentLoaded', () => {
+    updateBagCount();
+    updateButtonState();
+});
+
+export { addToBag, updateBagCount, updateButtonState };

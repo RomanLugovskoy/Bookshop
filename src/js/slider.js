@@ -1,14 +1,14 @@
 const slides = [
     {
-        img: 'img/slider/banner.jpg',
+        img: 'images/banner.jpg',
         alt: 'Black friday sale',
     },
     {
-        img: 'img/slider/banner2.jpg',
+        img: 'images/banner2.jpg',
         alt: 'Top 10 books for entrepreneurs',
     },
     {
-        img: 'img/slider/banner3.jpg',
+        img: 'images/banner3.jpg',
         alt: 'Cozy books selection',
     },
 ];

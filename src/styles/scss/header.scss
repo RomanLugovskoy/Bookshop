@@ -2,12 +2,15 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	margin: 0 auto;
+	z-index: 10;
 	padding: 47px 160px 40px;
+	background-color: #fff;
+}
+.header-container {
+	margin: 0 auto;
+	width: 1120px;
 	display: flex;
 	align-items: center;
-	background-color: #fff;
-	z-index: 10;
 }
 .header__logo {
 	width: 128px;
